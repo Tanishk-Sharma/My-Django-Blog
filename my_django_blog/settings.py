@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'posts',
 ]
 
 MIDDLEWARE = [
@@ -55,11 +56,12 @@ ROOT_URLCONF = 'my_django_blog.urls'
 
 TEMPLATES_GLOBAL = os.path.join(BASE_DIR, 'templates_global')
 TEMPLATES_BLOG = os.path.join(BASE_DIR, 'blog', 'templates')
+TEMPLATES_POSTS = os.path.join(BASE_DIR, 'posts', 'templates')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_GLOBAL, TEMPLATES_BLOG, ],
+        'DIRS': [TEMPLATES_GLOBAL, TEMPLATES_BLOG, TEMPLATES_POSTS, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
