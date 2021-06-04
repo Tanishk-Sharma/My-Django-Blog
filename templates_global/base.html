@@ -29,7 +29,7 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#!">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'all_posts' %}">Blog</a></li>
                 </ul>
             </div>
         </div>
@@ -37,9 +37,11 @@
     <!-- Page content-->
     <div class="container mt-5">
         <div class="row">
-            {% block body %}
+            <div class="col-lg-8">
+                {% block body %}
 
-            {% endblock %}
+                {% endblock %}
+            </div>
             <!-- Side widgets-->
             <div class="col-lg-4">
                 <!-- Search widget-->
