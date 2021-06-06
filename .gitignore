@@ -3,3 +3,4 @@
 *.sqlite3
 TODO.txt
 BUGS.txt
+my_django_blog/.env
