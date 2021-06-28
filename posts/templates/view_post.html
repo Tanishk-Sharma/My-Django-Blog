@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
+
+<!-- Post content-->
+<article>
+    <!-- Post header-->
+    <header class="mb-4">
+        <!-- Post title-->
+        <h1 class="fw-bolder mb-1">Test Post Heading</h1>
+        <!-- Post meta content-->
+        <div class="text-muted fst-italic mb-2">Posted on &lt;date&gt;January 1, 2021 by &lt;author&gt;Start Bootstrap</div>
+        <!-- Post categories-->
+        <div>
+        <a class="badge bg-secondary text-decoration-none link-light" href="#!">Categories</a>
+        <a class="badge bg-secondary text-decoration-none link-light" href="#!">Category 1</a>
+        </div>
+    </header>
+    <!-- Preview image figure-->
+    <figure class="mb-4"><img class="img-fluid rounded" src="" alt="This is the post banner image" /></figure>
+    <!-- Post content-->
+    <section class="mb-5">
+        <p class="fs-5 mb-4">The content goes here.</p>
+    </section>
+</article>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+{% endblock %}
