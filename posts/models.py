@@ -6,13 +6,13 @@ from django.utils.timezone import now
 
 #######################################################
 
-class Tags(models.Model):
-    tag_name = models.CharField(max_length=100)
-    class Meta:
-        verbose_name_plural = "Tags"
-
-    def __str__(self):
-        return self.tag_name
+# class Tags(models.Model):
+#     tag_name = models.CharField(max_length=100)
+#     class Meta:
+#         verbose_name_plural = "Tags"
+#
+#     def __str__(self):
+#         return self.tag_name
 
 #######################################################
 
@@ -38,7 +38,7 @@ class BlogPost(models.Model):
         ('PUBLISHED', 'PUBLISHED'),
     ]
     post_state = models.CharField(max_length=30, choices=post_state_choices, default=post_state_choices[0][0])
-    tags = models.ManyToManyField(Tags, related_name='posts_under_this_tag')
+    #tags = models.ManyToManyField(Tags, related_name='posts_under_this_tag')
     categories = models.ManyToManyField(Categories, related_name='posts_under_this_category')
 
     class Meta:
